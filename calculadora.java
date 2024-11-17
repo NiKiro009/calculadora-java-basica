@@ -12,7 +12,8 @@ public class calculadora {
             System.out.println("2. Resta");
             System.out.println("3. Multiplicación");
             System.out.println("4. División");
-            System.out.println("5. Salir");
+            System.out.println("5. Módulo");
+            System.out.println("6. Salir");
             System.out.print("Elige una opción: ");
 
             int opcion = scanner.nextInt();
@@ -40,8 +41,15 @@ public class calculadora {
                             System.out.println("Error: No se puede dividir entre cero.");
                         }
                         break;
+                    case 5: 
+                        if (num2 != 0){
+                            System.out.println("Resultado: " + Modulo(num1, num2));
+                        } else {
+                            System.out.println("El divisor no puede ser cero");
+                        }
+                        break;
                 }
-            } else if (opcion == 5) {
+            } else if (opcion == 6) {
                 continuar = false;
                 System.out.println("Saliendo de la calculadora...");
             } else {
@@ -56,5 +64,8 @@ public class calculadora {
     public static double restar(double a, double b) { return a - b; }
     public static double multiplicar(double a, double b) { return a * b; }
     public static double dividir(double a, double b) { return a / b; }
+    public static double Modulo(double a, double b) {return a % b; } 
+    
+    /*segundo commit añadir la función de Módulo */
     
 }
